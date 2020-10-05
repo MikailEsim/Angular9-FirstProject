@@ -1,17 +1,24 @@
-<div class="row">
-  <div class="col-md-4">
-    <button igxButton="flat">Kaydet</button>
-  </div>
-  <div class="col-md-4">
-    col-2
-  </div>
-  <div class="col-md-4">
-    col-3
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3">
+      <h4 routerLink="home">go to Home</h4>
+    </div>
+    <div class="col-md-3">
+      <h4 routerLink="role">go to Role</h4>
+    </div>
+    <div class="col-md-3">
+      <h4 routerLink="user">go to User</h4>
+    </div>
+    <div class="col-md-3">
+      <h4 [routerLink]="['user',7]">go to user 7 detail</h4>
+    </div>
   </div>
 </div>
+
+<button igxButton="flat">Welcome to App Component</button>
+
+<router-outlet></router-outlet>
 
 <ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
   <p style="font-size: 20px; color: white">Yükleniyor...</p>
 </ngx-spinner>
-
-<router-outlet></router-outlet>

@@ -10,11 +10,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxSpinnerModule } from "ngx-spinner";
 
-import { IgxButtonModule } from 'igniteui-angular';
+import { RoleComponent } from './role/role.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RoleComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +29,6 @@ import { IgxButtonModule } from 'igniteui-angular';
       preventDuplicates: true,
     }),
     NgxSpinnerModule,
-    IgxButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
