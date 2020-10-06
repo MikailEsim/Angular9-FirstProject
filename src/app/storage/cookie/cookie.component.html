@@ -1,0 +1,18 @@
+<div style="margin: 2rem;">
+    <div class="row">
+        <div class="col-md-12">
+            <input type="text" [(ngModel)]="name"> <br>
+            <button (click)="setItem(name)">Set Item</button>
+            <button (click)="getItem()">Get Item</button>
+            <button (click)="clearItem()">Clear name Item</button>
+            <button (click)="clearAll()">Clear All</button>
+            <button (click)="checkNameCookie()">Check Name Cookie</button>
+            <p>Name: {{ name }}</p>
+            <p>Cookie Value: {{ cookieValue }}</p>
+            <p>isExist: {{ isCookieExist }}</p>
+        </div>
+        <div class="col-md-12">
+            <button [routerLink]="['../local-storage']">Go To Local Storage Page</button>
+        </div>
+    </div>
+</div>

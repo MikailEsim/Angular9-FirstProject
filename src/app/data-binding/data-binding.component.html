@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="col-md-12">
+        <h5>
+            One Way Binding
+            <span style="font-size: 0.9rem;">from Component to DOM</span>
+        </h5>
+        <div class="row">
+            <div class="col-md-4">
+                <p>Interpolation</p>
+                <p>Ad: {{ user.name }} , Soyad: {{ user.surname }}</p>
+                <p>Yaş: {{20+2}}</p>
+                <div>
+                    <img height="120px" src={{user.favorite_place_image}} alt="favorite_place_image">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <p>Property Binding</p>
+                <input [type]="type" [value]="user.name" />
+            </div>
+            <div class="col-md-2">
+                <p>Attribute Binding</p>
+                <input [type]="type" [value]="user.name" [attr.disabled]="!user.isEditable ? 'disabled' : null" />
+            </div>
+            <div class="col-md-2">
+                <p>Class Binding</p>
+                <p [class.red]="!user.isEditable ? false : true">Renk Değeri !!!</p>
+            </div>
+            <div class="col-md-2">
+                <p>Style Binding</p>
+                <p [style.color]="user.name === 'Mikail' ? 'yellow' : 'black'">Renk Değeri !!!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <h5>
+            One Way Binding
+            <span style="font-size: 0.9rem;">from DOM to Component</span>
+        </h5>
+        <div class="row">
+            <div class="col-md-12">
+                <h5>Event Binding</h5>
+                <input type="text" [value]="user.name" (keyup.enter)="inputSubmit($event);" />
+                <button (click)="buttonClicked();">OK!</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <h5>
+            Two Way Binding
+            <span style="font-size: 0.9rem;">from DOM to Component</span>
+        </h5>
+        <div class="row">
+            <div class="col-md-12">
+                <h5>ngModel</h5>
+                <input type="text" [(ngModel)]="user.name" />
+                <p>{{ user.name }}</p>
+            </div>
+        </div>
+    </div>
+</div>
