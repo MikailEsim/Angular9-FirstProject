@@ -16,6 +16,12 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { IgxIconModule, IgxNavbarModule, IgxNavigationDrawerModule } from 'igniteui-angular';
 import { CookieService } from 'ngx-cookie-service';
 
+import { registerLocaleData } from '@angular/common';
+import localeTr from '@angular/common/locales/tr';
+import localeTrExtra from '@angular/common/locales/extra/tr';
+
+registerLocaleData(localeTr, 'tr-TR', localeTrExtra)
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +45,7 @@ import { CookieService } from 'ngx-cookie-service';
     IgxIconModule,
     IgxNavigationDrawerModule
   ],
-  providers: [ CookieService ],
+  providers: [CookieService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

@@ -1,0 +1,70 @@
+<div class="row">
+    <div class="col-md-4">
+        <h5>Lowercase</h5>
+        <p>Normal: {{title}}</p>
+        <p>Lowercase: {{title | lowercase}}</p>
+    </div>
+    <div class="col-md-4">
+        <h5>Titlecase</h5>
+        <p>Normal: {{title}}</p>
+        <p>Titlecase: {{title | titlecase}}</p>
+    </div>
+    <div class="col-md-4">
+        <h5>Uppercase</h5>
+        <p>Normal: {{title}}</p>
+        <p>Uppercase: {{title | uppercase}}</p>
+        <p>Turkish Uppercase: {{turkishUpperCaseVal | uppercase}}</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <h5>Date Pipe</h5>
+        <p>Normal Pipe Date: {{ today | date : "dd/MMMM/yyyy" }}</p>
+        <p>Medium Pipe Date: {{ today | date : "medium" }}</p>
+        <p>Full Pipe Date: {{ today | date : "full" }}</p>
+        <p>Turkish Pipe Date: {{ today | date : "dd/MMMM/yyyy":"":"tr-TR" }}</p>
+    </div>
+    <div class="col-md-6">
+        <h5>Currency Pipe</h5>
+        <p>Normal Value : {{ cashValue }}</p>
+        <p>Currency Pipe Value : {{ cashValue | currency: "EUR" }}</p>
+        <p>Turkish Currency Pipe Value : {{ cashValue | currency: "TRY":"symbol":"1.2-2":"tr-TR" }}</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h5>Json Pipe</h5>
+        <p>Without Pipe:</p>
+        <pre>{{ objectVal }}</pre>
+        <p>With Pipe:</p>
+        <pre>{{ objectVal | json }}</pre>
+    </div>
+    <div class="col-md-4">
+        <h5>Percent Pipe</h5>
+        <p>{{ percentVal | percent }}</p>
+        <p>{{ percentVal | percent:"":"tr-TR" }}</p>
+    </div>
+    <div class="col-md-4">
+        <h5>Slice Pipe</h5>
+        <p>Normal Hali : {{ cityName }}</p>
+        <p>Slice & Uppercase Pipe Hali : {{ cityName | uppercase | slice: 0:3 }}</p>
+        <p>Slice Pipe Hali : {{ cityName | slice: -2 }}</p>
+        <p>Slice Pipe Hali : {{ cityName | slice: 3 }}</p>
+        <p>Slice Pipe Hali : {{ cityName | slice: -4:-2 }}</p>
+        <p>Slice Pipe Hali : {{ cityName | slice: 0:3  }}</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h5>Custom Pipes</h5>
+        <p>{{ cash | tl }}</p>
+        <br>
+        <h6>Cities</h6>
+        <ul>
+            <li *ngFor="let city of cities | myFiltering : 'Y'">{{ city }}</li>
+        </ul>
+    </div>
+</div>
