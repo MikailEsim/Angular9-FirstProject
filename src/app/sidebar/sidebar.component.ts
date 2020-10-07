@@ -28,6 +28,14 @@ export class SidebarComponent implements OnInit {
       name: "Storage",
       routerLink: "storage"
     },
+    {
+      name: "Directives",
+      routerLink: "directives"
+    },
+    {
+      name: "Pipes",
+      routerLink: "pipes"
+    },
   ]
 
   constructor() { }
