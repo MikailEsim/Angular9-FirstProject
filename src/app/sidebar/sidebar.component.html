@@ -4,11 +4,10 @@
         <ng-template igxDrawer>
             <nav>
                 <span igxDrawerItem [isHeader]="true">Sidebar List</span>
-                <span igxDrawerItem routerLink="home">Home</span>
-                <span igxDrawerItem routerLink="role">Role</span>
-                <span igxDrawerItem routerLink="user">User</span>
-                <span igxDrawerItem routerLink="data-binding">Data Binding</span>
-                <span igxDrawerItem routerLink="storage">Storage</span>
+                <span igxDrawerItem routerLink="{{ element.routerLink }}"
+                    *ngFor="let element of elements; let i = index">
+                    {{ element.name }}
+                </span>
             </nav>
         </ng-template>
     </igx-nav-drawer>

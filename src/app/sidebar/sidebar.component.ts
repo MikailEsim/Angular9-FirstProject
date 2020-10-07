@@ -7,6 +7,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
+  elements = [
+    {
+      name: "Home",
+      routerLink: "home"
+    },
+    {
+      name: "Role",
+      routerLink: "role"
+    },
+    {
+      name: "User",
+      routerLink: "user"
+    },
+    {
+      name: "Data Binding",
+      routerLink: "data-binding"
+    },
+    {
+      name: "Storage",
+      routerLink: "storage"
+    },
+  ]
+
   constructor() { }
 
   ngOnInit(): void {
