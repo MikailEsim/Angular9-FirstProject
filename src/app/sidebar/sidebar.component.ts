@@ -36,6 +36,10 @@ export class SidebarComponent implements OnInit {
       name: "Pipes",
       routerLink: "pipes"
     },
+    {
+      name: "Parents",
+      routerLink: "parents"
+    },
   ]
 
   constructor() { }
