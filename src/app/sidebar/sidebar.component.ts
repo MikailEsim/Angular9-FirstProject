@@ -40,6 +40,10 @@ export class SidebarComponent implements OnInit {
       name: "Parents",
       routerLink: "parents"
     },
+    {
+      name: "Forms",
+      routerLink: "forms"
+    },
   ]
 
   constructor() { }
